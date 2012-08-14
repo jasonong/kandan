@@ -42,7 +42,8 @@
   <div id="mask">&nbsp;</div>
 
 </div>
-  <div class="user_menu">
+<div class="user_menu">
+    <%= link_to 'edit profile', edit_user_registration_path %>
     <%= link_to 'logout', destroy_user_session_path, :method => :delete %>
   </div>
 
