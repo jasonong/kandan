@@ -7,6 +7,7 @@ class Kandan.Views.ShowActivity extends Backbone.View
     activity = @options.activity.toJSON()
     activity.content = _.escape(activity.content)
     if activity.action != "message"
+      this.el.className += " notification"
       @compiledTemplate = JST['user_notification']({activity: activity})
     else
       modifiedMessage = Kandan.Modifiers.process(activity, @options.state)
